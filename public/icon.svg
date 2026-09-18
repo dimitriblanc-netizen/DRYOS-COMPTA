@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="50%" stop-color="#3730a3" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Subtle glow inner circle -->
+  <circle cx="256" cy="256" r="180" fill="#4338ca" opacity="0.35" />
+
+  <!-- Main Symbol Group (Safe Zone inside 80% circle) -->
+  <g filter="url(#shadow)" transform="translate(106, 106)">
+    <!-- Ledger & Document Base -->
+    <rect x="30" y="20" width="240" height="260" rx="32" fill="#ffffff" />
+    <path d="M70 75 h160 M70 120 h160 M70 165 h100" stroke="#cbd5e1" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Google Drive triangle fold / finance ribbon -->
+    <path d="M190 20 L270 100 L190 100 Z" fill="#94a3b8" opacity="0.3" />
+    <path d="M190 20 L270 100 H210 Q190 100 190 80 Z" fill="url(#emeraldGrad)" />
+
+    <!-- Trending Growth Dynamic Bars -->
+    <rect x="70" y="205" width="28" height="45" rx="8" fill="#e2e8f0" />
+    <rect x="115" y="175" width="28" height="75" rx="8" fill="url(#cyanGrad)" />
+    <rect x="160" y="140" width="28" height="110" rx="8" fill="url(#emeraldGrad)" />
+
+    <!-- Upward arrow floating badge -->
+    <circle cx="230" cy="225" r="42" fill="#059669" />
+    <path d="M216 225 L230 211 L244 225 M230 239 V213" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

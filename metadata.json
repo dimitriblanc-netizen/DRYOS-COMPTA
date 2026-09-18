@@ -1,0 +1,8 @@
+{
+  "name": "Compta DRYOS",
+  "description": "Logiciel de gestion comptable et financière multi-sociétés pour le Groupe DRYOS (DRYOS HOLDING, DRYOS IMMOBILIER S.A.S, SCI DRYOS I) avec gestion des actionnaires, organigramme du groupe, synchronisation Google Drive et exports Excel professionnels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

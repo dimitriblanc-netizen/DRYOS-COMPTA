@@ -1,0 +1,93 @@
+{
+  "entities": {
+    "Company": {
+      "title": "Company",
+      "description": "Une société ou entité juridique du groupe",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "legalForm": { "type": "string" },
+        "siren": { "type": "string" },
+        "color": { "type": "string" },
+        "currency": { "type": "string" },
+        "fiscalYear": { "type": "number" },
+        "fiscalClosingMonth": { "type": "number" },
+        "vatRegime": { "type": "string" },
+        "taxRegime": { "type": "string" },
+        "initialCash": { "type": "number" },
+        "bankName": { "type": "string" },
+        "iban": { "type": "string" },
+        "driveFolderId": { "type": "string" },
+        "drivePurchasesFolderId": { "type": "string" },
+        "driveSalesFolderId": { "type": "string" },
+        "contactEmail": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "name", "legalForm", "color", "currency", "fiscalYear", "vatRegime", "taxRegime"]
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Écriture comptable ou facture (dépense, recette, salaire, TVA, CCA)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "companyId": { "type": "string" },
+        "type": { "type": "string" },
+        "operationType": { "type": "string" },
+        "invoiceNumber": { "type": "string" },
+        "partnerName": { "type": "string" },
+        "description": { "type": "string" },
+        "issueDate": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "amountHT": { "type": "number" },
+        "tvaRate": { "type": "number" },
+        "amountTVA": { "type": "number" },
+        "amountTTC": { "type": "number" },
+        "category": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "status": { "type": "string" },
+        "netSalary": { "type": "number" },
+        "socialCharges": { "type": "number" },
+        "withholdingTax": { "type": "number" },
+        "isInterCompany": { "type": "boolean" },
+        "interCompanyTargetId": { "type": "string" },
+        "ccaPartnerName": { "type": "string" },
+        "ccaDirection": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "companyId", "type", "invoiceNumber", "partnerName", "amountHT", "amountTTC", "category", "paymentMethod", "status", "issueDate"]
+    },
+    "AppConfig": {
+      "title": "AppConfig",
+      "description": "Configuration partagée du groupe",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "destinationType": { "type": "string" },
+        "selectedSharedDriveId": { "type": "string" },
+        "rootFolderName": { "type": "string" },
+        "rootFolderId": { "type": "string" },
+        "rootFolderUrl": { "type": "string" },
+        "lastSyncAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "destinationType", "rootFolderName"]
+    }
+  },
+  "firestore": {
+    "/companies/{companyId}": {
+      "schema": "Company",
+      "description": "Liste des sociétés gérées par le groupe"
+    },
+    "/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Liste globale des transactions et écritures comptables"
+    },
+    "/config/{configId}": {
+      "schema": "AppConfig",
+      "description": "Configuration globale de l'application et du Google Drive"
+    }
+  }
+}

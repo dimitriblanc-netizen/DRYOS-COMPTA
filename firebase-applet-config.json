@@ -1,0 +1,12 @@
+{
+  "projectId": "dryos-compta",
+  "appId": "1:240069828137:web:984aa6122bdabf7dc58638",
+  "apiKey": "AIzaSyBmXnsgFQqzoxbDPpU0dtEGJz4piZBmP4w",
+  "authDomain": "dryos-compta.firebaseapp.com",
+  "firestoreDatabaseId": "ai-studio-comptadrivemulti-82fd16a8-3604-48ce-a494-4e120aab785f",
+  "storageBucket": "dryos-compta.firebasestorage.app",
+  "messagingSenderId": "240069828137",
+  "measurementId": "",
+  "oAuthClientId": "240069828137-v18glk2sbkts4cvufvo6b926je0uit7o.apps.googleusercontent.com",
+  "recaptchaSiteKey": ""
+}
